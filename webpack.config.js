@@ -4,11 +4,11 @@ const SpritesmithPlugin = require('webpack-spritesmith');
 
 
 var templateFunction = function (data) {
-	var shared = '.ico_comm { background-image: url(I) }'
+	var shared = '.ico_comm {display:block;background:url(I) no-repeat;}'
 		.replace('I', data.sprites[0].image);
 
 	var perSprite = data.sprites.map(function (sprite) {
-		return '.N { width: Wpx; height: Hpx; background-position: Xpx Ypx; }'
+		return '.N {width:Wpx;height:Hpx;background-position:Xpx Ypx;}'
 			.replace('N', sprite.name)
 			.replace('W', sprite.width)
 			.replace('H', sprite.height)
@@ -39,10 +39,6 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: [ "file-loader" ]
-			},
-			{
-				test: /\.png$/,
-				use: [ 'file-loader?name=i/[hash].[ext]' ]
 			}
 		]
 	},
@@ -67,6 +63,10 @@ module.exports = {
 			},
 			customTemplates: {
 				'function_based_template': templateFunction
+			},
+			//retina: '@2x',
+			spritesmithOptions: {
+				padding: 5
 			},
 			apiOptions: {
 				cssImageRef: "./images/sprite.png"

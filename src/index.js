@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import  './hello.scss';
 import  './sprite.scss';
+import  './images/sprite.png';
 import Icon from './ico_comm.png';
 
 function component() {
@@ -14,8 +15,14 @@ function component() {
 	var myIcon = new Image();
 	myIcon.src = Icon;
 
-	element.appendChild(myIcon);
 
+
+	var icoComm = document.createElement('span');
+	//icoComm.classList.add('ico_comm', 'ico_check');
+	icoComm.classList.add('ico_comm', 'ico_check_on');
+
+	element.appendChild(myIcon);
+	element.appendChild(icoComm);
 	return element;
 }
 

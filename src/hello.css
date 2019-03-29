@@ -5,7 +5,6 @@ body {
   body .hello {
     margin: 2rem;
     padding: 1rem;
-    border: 1px solid red;
-    background: url("./ico_comm.png") no-repeat; }
+    border: 1px solid red; }
 
 /*# sourceMappingURL=hello.css.map */
