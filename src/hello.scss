@@ -1,9 +1,12 @@
-$bgColor: #bbbbbb;
+$bgColor: #f9f9f9;
 body {
     background-color: $bgColor;
-    div {
+    font-size: 24px;
+    color: blue;
+    .hello {
         margin: 2rem;
         padding: 1rem;
         border: 1px solid red;
+        background:url('./ico_comm.png') no-repeat;
     }
 }

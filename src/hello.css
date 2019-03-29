@@ -1,8 +1,11 @@
 body {
-  background-color: #bbbbbb; }
-  body div {
+  background-color: #f9f9f9;
+  font-size: 24px;
+  color: blue; }
+  body .hello {
     margin: 2rem;
     padding: 1rem;
-    border: 1px solid red; }
+    border: 1px solid red;
+    background: url("./ico_comm.png") no-repeat; }
 
 /*# sourceMappingURL=hello.css.map */
