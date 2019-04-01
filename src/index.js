@@ -4,6 +4,8 @@ import  './sprite.scss';
 import  './images/sprite.png';
 import Icon from './ico_comm.png';
 
+/*
+
 function component() {
 	let element = document.createElement('div');
 
@@ -28,4 +30,4 @@ function component() {
 
 document.body.appendChild(component());
 
-console.log('hello webpack dev server');
+console.log('hello webpack dev server'); */

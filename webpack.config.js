@@ -30,7 +30,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/,
-				use:  [ "style-loader" , "css-loader" ]
+				use:  [ "style-loader" , {loader : "css-loader", options: {minimize: true} } ]
 			},
 			{
 				test: /\.scss$/,
@@ -42,11 +42,23 @@ module.exports = {
 			}
 		]
 	},
+	devServer: {
+		contentBase: path.join(__dirname, "./dist/"),
+		port: 8000
+	},
 	resolve: {
 		modules: ["node_modules", "spritesmith-generated"]
 	},
 	plugins: [
-		new HtmlWebpackPlugin(),
+		//new HtmlWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			title: 'Project Demo',
+			minify: {
+				collapseWhitespace: true
+			},
+			hash: true,
+			template: './src/index.html'
+		}),
 		new SpritesmithPlugin({
 			src: {
 				cwd: path.resolve(__dirname, 'src/ico'),
