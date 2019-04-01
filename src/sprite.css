@@ -1,0 +1,35 @@
+.ico_comm {
+  display: block;
+  background: url(./images/sprite.png) no-repeat; }
+
+.ico_check_on {
+  width: 14px;
+  height: 14px;
+  background-position: 0px -22px; }
+
+.ico_check {
+  width: 14px;
+  height: 14px;
+  background-position: -19px -22px; }
+
+.ico_close {
+  width: 13px;
+  height: 13px;
+  background-position: -44px 0px; }
+
+.ico_download {
+  width: 13px;
+  height: 12px;
+  background-position: -44px -18px; }
+
+.ico_radio_on {
+  width: 17px;
+  height: 17px;
+  background-position: 0px 0px; }
+
+.ico_radio {
+  width: 17px;
+  height: 17px;
+  background-position: -22px 0px; }
+
+/*# sourceMappingURL=sprite.css.map */
